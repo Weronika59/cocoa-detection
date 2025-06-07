@@ -78,3 +78,25 @@ W każdym projekcie znajduje się przestrzeń na wprowadzenie ulepszeń. W tym p
 - rozszerzenie projektu na inne wersje modelu YOLO (m.in. YOLOv11, najnowsze YOLOv12) i porównanie uzyskiwanych wyników.
 
 Należy jednak zaznaczyć, że do przeprowadzenia tych kroków potrzeba byłoby sporo mocy obliczeniowej, ponieważ ze względu na specyfikę problemu uczenie modelu do wykrywania orzechów kakaowca zajmuje dużo czasu.
+
+## Informacje dodatkowe
+ 
+W repozytorium oprócz folderu z wynikami /runs/detect znajdują się również pliki:
+- data.yaml - plik zawierający informacje na temat ścieżek do folderów ze zdjęciami, liczby klas i nazw rozpoznawanych klas, wykorzystywany do procesów uczenia, tuningu i walidacji,
+- yolov8m.pt - plik z pretrenowanymi wagami oraz architekturą modelu YOLOv8 medium, pobrany ze strony Ultralytics (https://docs.ultralytics.com/models/yolov8/#performance-metrics),
+- tuning.ipynb - plik zawierający kod oraz wyniki wszystkich przeprowadzonych treningów, tuningów hiperparametrów i walidacji modeli, a także rysowanie wykresów, utworzenie predykcji, zliczanie BB i wizualizację predykcji na zdjęciu,
+- wynik_val1.png - rysunek zawierający wykresy zmiany metryki Precision w zależności od wartości tuningowanych hiperparametrów,
+- wynik2_val1.png - rysunek zawierający wykresy zmiany metryki Recall w zależności od wartości tuningowanych hiperparametrów,
+- wynik3_val1.png - rysunek zawierający wykresy zmiany metryki mAP50 w zależności od wartości tuningowanych hiperparametrów,
+- box_loss_train2.png - wykres zmiany wartości funkcji straty w zależności od epoki podczas ostatniego treningu najlepszego modelu,
+- validation_mAP_train2.png - wykres zmiany wartości metryk mAP50 i mAP50-95 w zależności od epoki podczas ostatniego treningu najlepszego modelu,
+- conf.png - porównanie wyników detekcji przy zmiennym progu confidence,
+- 'Prezentacja - Estymacja plonów.pdf' - plik zawierający prezentację przedstawioną na spotkaniu SKN ATLAS 07.06.2025 r. podczas prezentowania wyników projektów semestralnych.
+ 
+W pliku 'Prezentacja - Estymacja plonów.pdf' zostały użyte pliki: box_loss_train2.png, validation_mAP_train2.png, conf.png.
+ 
+Pliki wynik_val1.png, wynik2_val1.png, wynik3_val1.png zostały utworzone, aby zbadać, w jaki sposób zmiana wartości każdego z tuningowanych hiperparametrów wpływa na zmianę wartości rozważanych metryk. Pliki te mogą zostać w przyszłości wykorzystane do podjęcia decyzji nt. tego, w jaki sposób zawęzić przedziały wartości hiperparametrów do następnego, głębszego tuningu (na większej liczbie epok).
+____________________________________________________________________________
+Autorami projektu są Weronika Nadworska oraz Faustyna Smarzewska, 
+studentki kierunku IAD II st. Politechniki Lubelskiej
+w roku akademickim 2024/25.
