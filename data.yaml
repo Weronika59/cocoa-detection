@@ -1,0 +1,6 @@
+train: /home/wnadworska/programming/kakao_v2/train
+val: /home/wnadworska/programming/kakao_v2/valid
+test: /home/wnadworska/programming/kakao_v2/test
+nc: 5 #liczba klas
+
+names: ["cocoa-pod-immature", "cocoa-pod-mature-unriped", "cocoa-pod-riped", "cocoa-pod-spoilt", "cocoa-tree"]
